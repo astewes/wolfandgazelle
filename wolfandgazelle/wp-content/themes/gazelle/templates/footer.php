@@ -1,5 +1,7 @@
 <footer class="content-info">
   <div class="container">
-    <?php dynamic_sidebar('sidebar-footer'); ?>
+    <div class="copyright">
+      <p>©<?php echo date("Y"); ?> Wolf &amp; Gazelle, LLC</p>
+    </div>
   </div>
 </footer>
