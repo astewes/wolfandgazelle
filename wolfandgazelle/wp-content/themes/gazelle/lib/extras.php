@@ -37,6 +37,9 @@ function childtheme_override_nav_below() {
 }
 add_action('init', __NAMESPACE__ . '\\remove_post_navigation');
 
+/**
+ * Remove "Older Posts" label from bottom of post pages
+ */
 function sanitize_pagination($content) {
     // Remove role attribute
     $content = str_replace('role="navigation"', '', $content);
@@ -47,3 +50,22 @@ function sanitize_pagination($content) {
     return $content;
 }
 add_action('navigation_markup_template', __NAMESPACE__ . '\\sanitize_pagination');
+
+/**
+ * Add Google Font
+ */
+function add_google_fonts() {
+  wp_enqueue_style('add-google-fonts', 'http://fonts.googleapis.com/css?family=Inconsolata', false);
+}
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\add_google_fonts' );
+
+/**
+ * Modify Excerpt More
+ */
+function new_excerpt_more($more) {
+  global $post;
+  remove_filter('excerpt_more', 'new_excerpt_more');
+  return ' <a class="read-more" href="'. get_permalink($post->ID) . '">' . '<span class="blur"></span><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>' . '</a>';
+}
+add_filter('excerpt_more', __NAMESPACE__ . '\\new_excerpt_more');
+
