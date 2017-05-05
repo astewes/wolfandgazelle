@@ -32,7 +32,7 @@ function excerpt_more() {
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
-function childtheme_override_nav_below() {
+function remove_post_navigation() {
   remove_action('thematic_navigation_below', 'thematic_nav_below', 2);
 }
 add_action('init', __NAMESPACE__ . '\\remove_post_navigation');
@@ -55,7 +55,7 @@ add_action('navigation_markup_template', __NAMESPACE__ . '\\sanitize_pagination'
  * Add Google Font
  */
 function add_google_fonts() {
-  wp_enqueue_style('add-google-fonts', 'http://fonts.googleapis.com/css?family=Inconsolata', false);
+  wp_enqueue_style('add-google-fonts', 'http://fonts.googleapis.com/css?family=Inconsolata:400,700|Roboto+Slab', false);
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\add_google_fonts' );
 
