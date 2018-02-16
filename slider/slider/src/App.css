@@ -1,0 +1,69 @@
+.App {
+  text-align: center; }
+
+.slide {
+  max-width: 80%;
+  margin: 0 auto; }
+  .slide > div {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap; }
+    .slide > div > div {
+      flex: 0 0 50%;
+      height: 50%;
+      width: 100%; }
+
+.slideTop {
+  background-color: #fff; }
+  .slideTop span {
+    display: inline-block;
+    color: #fff;
+    background-color: blue;
+    margin: 0 auto;
+    padding: 5px 10px;
+    border-radius: 15px; }
+
+.slideBottom span {
+  color: #fff;
+  font-size: 42px;
+  text-align: center; }
+
+.rangeslider {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  top: 42vh; }
+
+.rangeslider-horizontal .rangeslider__fill {
+  background-color: transparent !important;
+  box-shadow: none !important; }
+
+.rangeslider .rangeslider__handle {
+  background-color: #eee !important;
+  border: 1px solid #333 !important;
+  box-shadow: none !important;
+  opacity: 0.3; }
+  .rangeslider .rangeslider__handle:after {
+    background-color: transparent !important;
+    box-shadow: none !important; }
+  .rangeslider .rangeslider__handle:focus {
+    cursor: none;
+    outline: 0; }
+
+.swipeItem {
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+  outline: 1px solid black; }
+
+.swipeItem-content {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
