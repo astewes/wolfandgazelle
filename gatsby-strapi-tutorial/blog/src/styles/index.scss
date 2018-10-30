@@ -1,0 +1,50 @@
+@import 'variables';
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-kerning: normal;
+  word-wrap: break-word;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+a {
+  color: $link-text;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  transition: color 0.2s ease;
+  &:active,
+  &:focus,
+  &:hover {
+    outline-width: 0;
+  }
+  &:hover {
+    color: lighten($link-text, 10% );
+    text-decoration: none;
+  }
+}
+img {
+  margin: 0 1.45rem 0 0;
+  max-width: 100%;
+  padding: 0;
+}
+.card {
+  border: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px;
+
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+}

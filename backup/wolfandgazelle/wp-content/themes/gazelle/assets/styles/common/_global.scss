@@ -1,0 +1,22 @@
+html {
+  font-size: 80%;
+}
+
+div.content {
+  padding:                6em 3em 4.5em;
+}
+
+a {
+  color: $link-color;
+
+  @include hover-focus {
+    color: $link-hover-color;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+li {
+  list-style-type: none;
+}

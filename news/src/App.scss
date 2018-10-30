@@ -1,0 +1,42 @@
+body {
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'PT Serif', serif;
+  font-weight: 700;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 70px;
+}
+
+.navbar {
+  justify-content: flex-start;
+}
+
+.navbar-brand {
+  font-family: 'PT Serif', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  height: 150px;
+  padding: 20px;
+  color: black;
+}
+
+footer .navbar {
+  padding: 0;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

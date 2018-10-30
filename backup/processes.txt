@@ -1,0 +1,4 @@
+mongod - gatsby-strapi tutorial
+mongo - root
+strapi start - gatsby-strapi tutorial/api
+gatsby develop - /blog

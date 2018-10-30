@@ -1,0 +1,48 @@
+{
+  "connection": "default",
+  "collectionName": "article",
+  "info": {
+    "name": "article",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "headline": {
+      "multiple": false,
+      "type": "string",
+      "required": true
+    },
+    "copy": {
+      "multiple": false,
+      "type": "text",
+      "required": true
+    },
+    "byline": {
+      "model": "user",
+      "via": "articles",
+      "plugin": "users-permissions"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "picture": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "subtitle": {
+      "multiple": false,
+      "type": "string",
+      "required": true
+    },
+    "dateline": {
+      "multiple": false,
+      "type": "date",
+      "required": true
+    }
+  }
+}

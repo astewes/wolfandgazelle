@@ -1,0 +1,47 @@
+// Search form
+.search-form {
+
+  position: relative;
+
+  .search-field {
+    border-radius: 3px;
+    display: block;
+    padding: 0.7em;
+    width: 100%;
+
+    &:focus {
+      border-color: $link-color;
+      outline: none;
+    }
+  }
+
+  .search-submit {
+    bottom: 3px;
+    padding: 0.5em 1em;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: all .2s ease-in-out;
+  }
+}
+.search-form label {
+  font-weight: normal;
+  @extend .form-group;
+}
+.search-form .search-field {
+  @extend .form-control;
+}
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-secondary;
+}
